@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="975.0" stylesheets="@../styles/style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scientia.periodic_table_editor.Controller">
+  <tabs>
+    <Tab closable="false" text="Create/Sellect Project">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btn_crt_tbl" layoutX="397.0" layoutY="116.0" mnemonicParsing="false" styleClass="create" text="Create" />
+                  <ChoiceBox fx:id="cbox_crt_tbl" layoutX="20.0" layoutY="116.0" />
+                  <TextField fx:id="txt_xlsx_path" layoutX="659.0" layoutY="116.0" promptText="xlsx table path" styleClass="filepath" />
+                  <TextField fx:id="txt_html_path" layoutX="659.0" layoutY="171.0" promptText="html table path" styleClass="filepath" />
+                  <ChoiceBox fx:id="cbox_crt_math_tbl" layoutX="20.0" layoutY="227.0" />
+                  <ChoiceBox fx:id="cbox_math_sys" layoutX="213.0" layoutY="227.0" />
+                  <Button fx:id="btn_crt_math_tbl" layoutX="397.0" layoutY="227.0" mnemonicParsing="false" styleClass="create" text="Create" />
+                  <Button fx:id="btn_xlsx_path" layoutX="617.0" layoutY="116.0" mnemonicParsing="false" styleClass="small" text="..." />
+                  <Button fx:id="btn_html_path" layoutX="617.0" layoutY="171.0" mnemonicParsing="false" styleClass="small" text="..." />
+                  <Label layoutX="20.0" layoutY="77.0" text="Create Table" />
+                  <Label layoutX="20.0" layoutY="196.0" text="Create Math Table" />
+                  <Label layoutX="213.0" layoutY="196.0" text="Math System" />
+                  <Label layoutX="659.0" layoutY="77.0" text="Existed File Path" />
+               </children>
+            </AnchorPane>
+         </content></Tab>
+      <Tab closable="false" text="Edit">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txt_num" layoutX="20.0" layoutY="47.0" styleClass="number" />
+                  <TextField fx:id="txt_formula" layoutX="20.0" layoutY="96.0" styleClass="formula" />
+                  <Label layoutX="64.0" layoutY="52.0" text="Number Of Element" />
+                  <Label layoutX="229.0" layoutY="101.0" text="Formula of Compound" />
+                  <Pane layoutX="448.0" layoutY="60.0" style="-fx-border-color: #000000;" styleClass="image">
+                     <children>
+                        <ImageView fx:id="img" fitHeight="440.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <TextField fx:id="txt_hex" editable="false" layoutX="448.0" layoutY="509.0" promptText="#HEX" />
+                  <Button fx:id="btn_img" layoutX="20.0" layoutY="173.0" mnemonicParsing="false" text="Sellect Image" />
+                  <Button fx:id="btn_updt_tbl" layoutX="20.0" layoutY="268.0" mnemonicParsing="false" text="Update Table" />
+                  <ChoiceBox fx:id="cbox_fill_empty_cells" layoutX="20.0" layoutY="384.0" />
+                  <Label layoutX="20.0" layoutY="348.0" text="Math System" />
+                  <Button fx:id="btn_fill_empty_cells" layoutX="187.0" layoutY="384.0" mnemonicParsing="false" styleClass="big" text="Fill Empy Cells" />
+                  <Pane fx:id="pane_clr" layoutX="668.0" layoutY="507.0" styleClass="color" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

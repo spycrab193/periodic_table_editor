@@ -1,0 +1,75 @@
+@font-face { 
+    font-family: Vinron; 
+    src: url('../fonts/Vinron/Vinron-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face { 
+    font-family: Vinron; 
+    src: url('../fonts/Vinron/Vinron-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+} 
+@font-face { 
+    font-family: Vinron; 
+    src: url('../fonts/Vinron/Vinron-Oblique.otf');
+    font-weight: normal;
+    font-style: oblique;
+} 
+@font-face { 
+    font-family: Vinron; 
+    src: url('../fonts/Vinron/Vinron-BoldOblique.otf');
+    font-weight: bold;
+    font-style: oblique;
+} 
+
+.root { 
+    -fx-font-family: 'Vinron';  
+} 
+Tab{
+	-fx-pref-height: 35;
+}
+Button{
+	-fx-font-weight: bold;
+	-fx-pref-width: 115;
+}
+Button.create{
+	-fx-pref-width: 65;
+}
+Button.small{
+	-fx-pref-width: 35;
+}
+Button.big{
+	-fx-pref-width: 120;
+}
+TextField{
+	-fx-font-style: oblique;
+	-fx-pref-width: 170;	
+}
+TextField.filepath{
+	-fx-font-style: oblique;
+	-fx-pref-width: 300;	
+}
+TextField.formula{
+	-fx-font-style: oblique;
+	-fx-pref-width: 180;	
+}
+TextField.number{
+	-fx-font-style: oblique;
+	-fx-pref-width: 40;	
+}
+Pane.color{
+	-fx-pref-width: 170;
+	-fx-pref-height: 35;
+	-fx-border-color:#000000;
+}
+Pane.image{
+	-fx-pref-width: 500;
+	-fx-pref-height: 440;
+	-fx-border-color:#000000;
+}
+ChoiceBox{
+	-fx-font-weight: bold;
+	-fx-font-style: oblique;
+	-fx-pref-width: 150;
+}
