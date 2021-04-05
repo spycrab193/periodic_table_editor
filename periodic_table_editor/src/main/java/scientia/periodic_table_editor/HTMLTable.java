@@ -9,7 +9,7 @@ public class HTMLTable implements Table{
 	@Override
 	public void Create(String type, String path) {
 		try {
-			File htmlFile = new File("table/html");
+			File htmlFile = new File("@../table/html.txt");
 			FileReader reader=new FileReader(htmlFile);
 			String html=reader.toString();
 /*			  String html="<html> \n"
@@ -254,6 +254,7 @@ public class HTMLTable implements Table{
 			  FileWriter writer = new FileWriter(path);
 		      writer.write(html);
 		      writer.close();
+		      reader.close();
 		} catch (IOException e) {
 		      System.out.println("An error occurred.");
 		      e.printStackTrace();
