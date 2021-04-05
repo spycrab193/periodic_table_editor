@@ -2,15 +2,23 @@ package scientia.periodic_table_editor;
 
 import java.io.IOException;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;   
 public class HTMLTable implements Table{
 	//Создание таблицы html
 	@Override
 	public void Create(String type, String path) {
-		try {
-			FileReader reader=new FileReader("table/html.txt");
-			String html=reader.toString();
+		try (FileInputStream fin=new FileInputStream("src/main/resources/scientia/periodic_table_editor/table/html.txt");
+                FileOutputStream fos=new FileOutputStream(path)){
+			 byte[] buffer = new byte[fin.available()];
+	            // считываем буфер
+	            fin.read(buffer, 0, buffer.length);
+	            // записываем из буфера в файл
+	            fos.write(buffer, 0, buffer.length);
+/*			FileReader reader=new FileReader("src/main/resources/scientia/periodic_table_editor/table/html.txt");
+			String html=reader.toString();*/
 /*			  String html="<html> \n"
 			  		+ " <head> \n"
 			  		+ "  <meta charset=\"UTF-8\"> \n"
@@ -250,10 +258,10 @@ public class HTMLTable implements Table{
 			  		+ "  </table>  \n"
 			  		+ " </body>\n"
 			  		+ "</html>";*/
-			  FileWriter writer = new FileWriter(path);
+/*			  FileWriter writer = new FileWriter(path);
 		      writer.write(html);
 		      writer.close();
-		      reader.close();
+		      reader.close();*/
 		} catch (IOException e) {
 		      System.out.println("An error occurred.");
 		      e.printStackTrace();
