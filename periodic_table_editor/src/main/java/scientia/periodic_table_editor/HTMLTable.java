@@ -9,8 +9,7 @@ public class HTMLTable implements Table{
 	@Override
 	public void Create(String type, String path) {
 		try {
-			File htmlFile = new File("@../table/html.txt");
-			FileReader reader=new FileReader(htmlFile);
+			FileReader reader=new FileReader("table/html.txt");
 			String html=reader.toString();
 /*			  String html="<html> \n"
 			  		+ " <head> \n"
