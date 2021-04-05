@@ -1,13 +1,18 @@
 package scientia.periodic_table_editor;
 
 import java.io.IOException;
+import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;   
 public class HTMLTable implements Table{
 	//Создание таблицы html
 	@Override
 	public void Create(String type, String path) {
 		try {
-			  String html="<html> \n"
+			File htmlFile = new File("table/html");
+			FileReader reader=new FileReader(htmlFile);
+			String html=reader.toString();
+/*			  String html="<html> \n"
 			  		+ " <head> \n"
 			  		+ "  <meta charset=\"UTF-8\"> \n"
 			  		+ "  <title>Periodic table</title> \n"
@@ -245,7 +250,7 @@ public class HTMLTable implements Table{
 			  		+ "   </tbody>\n"
 			  		+ "  </table>  \n"
 			  		+ " </body>\n"
-			  		+ "</html>";
+			  		+ "</html>";*/
 			  FileWriter writer = new FileWriter(path);
 		      writer.write(html);
 		      writer.close();

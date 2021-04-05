@@ -16,7 +16,7 @@ public class ExcelTable implements Table{
 	public void Create(String type, String path) {
 		XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("Elements");
-        Object[][] elements = {
+        final Object[][] elements = {
                 {"Z", "Symbol", "Latin", "English", "Estonian", "Russian", "Colour", "HEX", "Formula"},
                 {1, "H", "Hydrogenium", "Hydrogen","Vesinik","Водород"},
                 {2, "He", "Helium",	"Helium", "Heelium", "Гелий"},
@@ -138,7 +138,7 @@ public class ExcelTable implements Table{
                 {118, "Og", "Oganesson", "Oganesson", "Oganessoon", "Оганесон"}
         };
         //Если таблица математическая, то последний столбец(для формул) удаляется
-        if (type=="math"){
+        if (type.equals("math")){
         	elements[0][8]=null;
         }
         
@@ -162,6 +162,7 @@ public class ExcelTable implements Table{
             FileOutputStream outputStream = new FileOutputStream(path);
             workbook.write(outputStream);
             workbook.close();
+            outputStream.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

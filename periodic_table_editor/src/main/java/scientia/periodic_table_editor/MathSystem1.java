@@ -3,7 +3,7 @@ package scientia.periodic_table_editor;
 public class MathSystem1 implements Math {
 	@Override
 	public String getHex(int i) {
-		Constant a =new Constant();
+		final Constant a =new Constant();
 		int r=a.constanta[i-1][1];
 		int g=a.constanta[i-1][2]*10;
 		int b=a.constanta[i-1][0]*10;
